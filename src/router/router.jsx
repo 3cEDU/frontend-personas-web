@@ -22,7 +22,7 @@ export const Router = () => {
     <Routes>
         <Route path="/" element={<Navigate to="/person" />} />
         <Route path="/home" element={isAuthenticated ? Menu(<Home />) : Menu(<Home />)} />
-        <Route path="/person" element={isAuthenticated ? Menu(<Person />) : Menu(<Person />)} />
+        <Route path="/person" element={isAuthenticated ? <Person /> : (<Person />)} />
 
 
 
