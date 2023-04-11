@@ -284,20 +284,8 @@ const Person = () => {
 
   return (
     <>
-      {/* <Title title={"Personas"} category={"App"} /> */}
-      <div className="d-flex justify-content-end">
-        <button
-          type="button"
-          className="btn btn-primary mb-3"
-          data-bs-toggle="modal"
-          data-bs-target="#persona"
-        >
-          <i className="uil-plus"></i> Agregar
-        </button>
-      </div>
-
-      <div className="row mb-3 mb-sm-0 mb-md-3">
-        <div className="col-md-4 mb-md-0 mb-sm-3">
+      <div className="row mb-3 mb-sm-0 mb-md-3 container mt-5">
+        <div className="col-md-3 mb-md-0 mb-sm-3">
           <div className="form-floating">
             <select
               className="form-select"
@@ -315,7 +303,7 @@ const Person = () => {
             <label htmlFor="tipO_DOC">Tipo de documento</label>
           </div>
         </div>
-        <div className="col-md-4 mb-md-0 mb-sm-3">
+        <div className="col-md-3 mb-md-0 mb-sm-3">
           <div className="form-floating">
             <input
               type="text"
@@ -342,8 +330,22 @@ const Person = () => {
             </button>
           </div>
         </div>
+        <div className="col-md-2 mb-md-0 mb-sm-3">
+          <div className="form-floating">
+            <button
+              type="button"
+              className="btn btn-primary mb-3"
+              data-bs-toggle="modal"
+              data-bs-target="#persona"
+            >
+              <i className="uil-plus"></i> Agregar
+            </button>
+          </div>
+        </div>
       </div>
 
+      <div className="row mb-3 mb-sm-0 mb-md-3 container">
+        <div className="col-md-12 mb-md-0 mb-sm-3">
       <pre
         style={{
           backgroundColor: "#f5f5f5",
@@ -359,6 +361,8 @@ const Person = () => {
       >
         {JSON.stringify(busqueda, null, 2)}
       </pre>
+              </div>
+      </div>
 
       <div className="card">
         <div className="card-body">
