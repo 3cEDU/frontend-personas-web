@@ -357,6 +357,7 @@ const Person = () => {
           overflowX: "auto",
           whiteSpace: "pre-wrap",
           wordWrap: "break-word",
+          color: "black",
         }}
       >
         {JSON.stringify(busqueda, null, 2)}
