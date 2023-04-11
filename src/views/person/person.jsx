@@ -15,7 +15,7 @@ import {
 } from "../../service/person";
 import Modal from "../../components/Modal/modal";
 import AddModalPerson from "./addModalPerson";
-import Title from "../../components/Title/title";
+//import Title from "../../components/Title/title";
 
 const Person = () => {
   const defaultfields = {
@@ -283,7 +283,7 @@ const Person = () => {
 
   return (
     <>
-      <Title title={"Personas"} category={"App"} />
+      {/* <Title title={"Personas"} category={"App"} /> */}
       <div className="d-flex justify-content-end">
         <button
           type="button"
