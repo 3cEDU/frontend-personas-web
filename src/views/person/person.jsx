@@ -227,6 +227,7 @@ const Person = () => {
     };
     console.log(defaultfieldsEdit);
     setFields(defaultfieldsEdit);
+    setBusqueda(null);
   };
   
   $(document).off("click", "#editPerson").on("click", "#editPerson", function (e) {
@@ -284,8 +285,7 @@ const Person = () => {
   return (
     <>
       {/* <Title title={"Personas"} category={"App"} /> */}
-      <br />
-      {/* <div className="d-flex justify-content-end">
+      <div className="d-flex justify-content-end">
         <button
           type="button"
           className="btn btn-primary mb-3"
@@ -294,10 +294,10 @@ const Person = () => {
         >
           <i className="uil-plus"></i> Agregar
         </button>
-      </div> */}
+      </div>
 
       <div className="row mb-3 mb-sm-0 mb-md-3">
-        <div className="col-md-3 mb-md-0 mb-sm-3">
+        <div className="col-md-4 mb-md-0 mb-sm-3">
           <div className="form-floating">
             <select
               className="form-select"
@@ -315,7 +315,7 @@ const Person = () => {
             <label htmlFor="tipO_DOC">Tipo de documento</label>
           </div>
         </div>
-        <div className="col-md-3 mb-md-0 mb-sm-3">
+        <div className="col-md-4 mb-md-0 mb-sm-3">
           <div className="form-floating">
             <input
               type="text"
@@ -342,37 +342,23 @@ const Person = () => {
             </button>
           </div>
         </div>
-        <div className="col-md-2 mb-md-0 mb-sm-3">
-          <div className="form-floating">
-          <button
-          type="button"
-          className="btn btn-primary mb-3"
-          data-bs-toggle="modal"
-          data-bs-target="#persona"
-        >
-          <i className="uil-plus"></i> Agregar
-        </button>
-          </div>
-        </div>
       </div>
 
       <pre
-      style={{
-        backgroundColor: "#f5f5f5",
-        border: "1px solid #ccc",
-        fontFamily: "'Courier New', Courier, monospace",
-        fontSize: "14px",
-        lineHeight: "1.5",
-        padding: "10px",
-        overflowX: "auto",
-        whiteSpace: "pre-wrap",
-        wordWrap: "break-word",
-        color: "black", // Agregar esta línea
-      }}
-    >
-      {JSON.stringify(busqueda, null, 2)}
-    </pre>
-
+        style={{
+          backgroundColor: "#f5f5f5",
+          border: "1px solid #ccc",
+          fontFamily: "'Courier New', Courier, monospace",
+          fontSize: "14px",
+          lineHeight: "1.5",
+          padding: "10px",
+          overflowX: "auto",
+          whiteSpace: "pre-wrap",
+          wordWrap: "break-word",
+        }}
+      >
+        {JSON.stringify(busqueda, null, 2)}
+      </pre>
 
       <div className="card">
         <div className="card-body">
